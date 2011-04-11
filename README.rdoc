@@ -1,6 +1,40 @@
 = governor_thinking_sphinx
 
-Description goes here.
+*Governor[http://carpeliam.github.com/governor/]* (named after Rod
+Blagojevich) is the pluggable blogging platform for Rails, built for people
+who want to build their blog into their website, not build their website into
+their blog.
+
+*governor_thinking_sphinx* is a plugin for Governor, allowing people to search
+within your blog.
+
+== Dependencies
+
+* Governor, version 0.2.2 or higher.
+* ThinkingSphinx
+* ActiveRecord
+
+== Setting Up
+
+First, install Governor[http://carpeliam.github.com/governor/]. Then, in your
+Gemfile, add the following:
+
+    gem 'governor_thinking_sphinx'
+
+Once you've installed the gem into your app, you need to run the generator:
+
+    rails generate governor:add_thinking_sphinx [RESOURCE]
+
+If you've only created one type of resource (which is typical), then you won't
+need any arguments. Otherwise, you'll need to specify which model you want to
+add searching to. This will create a migration to enable your article class to
+support delta indexing.
+
+== Usage
+
+The current version does not have a built-in view for searching. The best
+example is in the
+spec[https://github.com/carpeliam/governor_thinking_sphinx/blob/master/spec/rails_app/app/views/layouts/application.html.erb#L21].
 
 == Contributing to governor_thinking_sphinx
  
