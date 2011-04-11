@@ -15,8 +15,8 @@ Jeweler::Tasks.new do |gem|
   gem.name = "governor_thinking_sphinx"
   gem.homepage = "http://github.com/carpeliam/governor_thinking_sphinx"
   gem.license = "MIT"
-  gem.summary = %Q{TODO: one-line summary of your gem}
-  gem.description = %Q{TODO: longer description of your gem}
+  gem.summary = %Q{ThinkingSphinx plugin for the Rails 3-based Governor blogging system.}
+  gem.description = %Q{ThinkingSphinx plugin for the Rails 3-based Governor blogging system.}
   gem.email = "liam@carpeliam.com"
   gem.authors = ["Liam Morley"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
@@ -26,21 +26,18 @@ Jeweler::Tasks.new do |gem|
 end
 Jeweler::RubygemsDotOrgTasks.new
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
+require 'rspec/core'
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec) do |spec|
+  spec.pattern = FileList['spec/**/*_spec.rb']
 end
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
+RSpec::Core::RakeTask.new(:rcov) do |spec|
+  spec.pattern = 'spec/**/*_spec.rb'
+  spec.rcov = true
 end
 
-task :default => :test
+task :default => :spec
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
@@ -50,4 +47,5 @@ Rake::RDocTask.new do |rdoc|
   rdoc.title = "governor_thinking_sphinx #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
+  rdoc.rdoc_files.exclude('lib/generators/**/*.rb')
 end

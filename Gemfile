@@ -1,13 +1,23 @@
-source "http://rubygems.org"
-# Add dependencies required to use your gem here.
-# Example:
-#   gem "activesupport", ">= 2.3.5"
+source 'http://rubygems.org'
 
-# Add dependencies to develop your gem here.
-# Include everything needed to run rake, tests, features, etc.
+gem 'governor', '0.2.2'
+gem 'thinking-sphinx', '2.0.0', :require => 'thinking_sphinx'
+
+group :development, :test do
+  gem 'jeweler', '~> 1.5.2'
+  gem 'sqlite3'
+  gem 'rspec-rails'
+  gem 'mocha'
+  gem 'factory_girl', '~> 2.0.0.beta'
+  gem 'factory_girl_rails', '~> 1.1.beta'
+  gem 'activerecord-nulldb-adapter'
+  
+  gem 'will_paginate', '~> 3.0.beta'
+  gem 'devise'
+  gem 'governor_thinking_sphinx', :path => './'
+  gem 'dynamic_form'
+end
+
 group :development do
-  gem "shoulda", ">= 0"
-  gem "bundler", "~> 1.0.0"
-  gem "jeweler", "~> 1.5.2"
-  gem "rcov", ">= 0"
+  gem 'mysql2'
 end
