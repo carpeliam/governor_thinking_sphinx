@@ -16,7 +16,7 @@ Jeweler::Tasks.new do |gem|
   gem.homepage = "http://github.com/carpeliam/governor_thinking_sphinx"
   gem.license = "MIT"
   gem.summary = %Q{ThinkingSphinx plugin for the Rails 3-based Governor blogging system.}
-  gem.description = %Q{ThinkingSphinx plugin for the Rails 3-based Governor blogging system.}
+  gem.description = %Q{A plugin for the Rails 3-based Governor blogging system that adds ThinkingSphinx search functionality to a blog.}
   gem.email = "liam@carpeliam.com"
   gem.authors = ["Liam Morley"]
   # Include your dependencies below. Runtime dependencies are required when using your gem,
