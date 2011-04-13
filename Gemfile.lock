@@ -1,9 +1,9 @@
 PATH
   remote: ./
   specs:
-    governor_thinking_sphinx (0.1.0)
-      governor (= 0.2.2)
-      thinking-sphinx (= 2.0.0)
+    governor_thinking_sphinx (0.1.2)
+      governor (~> 0.2.2)
+      thinking-sphinx (~> 2.0)
 
 GEM
   remote: http://rubygems.org/
@@ -122,7 +122,7 @@ DEPENDENCIES
   dynamic_form
   factory_girl (~> 2.0.0.beta)
   factory_girl_rails (~> 1.1.beta)
-  governor (= 0.2.2)
+  governor (~> 0.2.2)
   governor_thinking_sphinx!
   jeweler (~> 1.5.2)
   mocha

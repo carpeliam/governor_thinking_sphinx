@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem 'governor', '0.2.2'
+gem 'governor', '~> 0.2.2'
 gem 'thinking-sphinx', '~> 2.0', :require => 'thinking_sphinx'
 
 group :development, :test do
