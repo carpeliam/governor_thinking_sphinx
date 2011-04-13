@@ -129,5 +129,5 @@ DEPENDENCIES
   mysql2
   rspec-rails
   sqlite3
-  thinking-sphinx (= 2.0.0)
+  thinking-sphinx (~> 2.0)
   will_paginate (~> 3.0.beta)
