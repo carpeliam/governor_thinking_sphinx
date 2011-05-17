@@ -1,4 +1,4 @@
-module Governor
+module GovernorThinkingSphinx
   module Controllers
     module Methods
       def search
