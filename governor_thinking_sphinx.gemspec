@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{governor_thinking_sphinx}
-  s.version = "0.1.3"
+  s.version = "0.1.4"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Liam Morley"]
-  s.date = %q{2011-04-16}
+  s.date = %q{2011-05-16}
   s.description = %q{A plugin for the Rails 3-based Governor blogging system that adds ThinkingSphinx search functionality to a blog.}
   s.email = %q{liam@carpeliam.com}
   s.extra_rdoc_files = [
@@ -28,8 +28,8 @@ Gem::Specification.new do |s|
     "governor_thinking_sphinx.gemspec",
     "lib/generators/governor/add_thinking_sphinx_generator.rb",
     "lib/generators/governor/templates/migrations/add_thinking_sphinx.rb",
-    "lib/governor/controllers/methods.rb",
     "lib/governor_thinking_sphinx.rb",
+    "lib/governor_thinking_sphinx/controllers/methods.rb",
     "lib/governor_thinking_sphinx/rails.rb",
     "script/rails",
     "spec/controllers/governor/articles_controller_spec.rb",
